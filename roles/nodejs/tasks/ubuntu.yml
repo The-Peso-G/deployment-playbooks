@@ -5,15 +5,15 @@
 - name: add nodejs repository key
   apt_key:
     keyserver: keyserver.ubuntu.com
-    id: "{{ node_key_id }}"
+    id: 68576280
     state: present
 
 - name: Add nodejs repository
   apt_repository:
-    repo: 'deb {{ node_source_deb }} {{ansible_distribution_release}} main'
+    repo: 'deb {{ NODE_SOURCE_DEB }} {{ ansible_distribution_release }} main'
     state: present
 
 - name: Install nodejs packages
   apt: name={{ item }} state=present update_cache=yes
   with_items:
-    - nodejs
+  - nodejs

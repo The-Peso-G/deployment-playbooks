@@ -3,19 +3,13 @@
   package: name=nginx state=present
   tags: nginx
 
-- name: Install Pip (Ubuntu)
-  package:
-    name: "python3-pip"
-    state: present
+- import_tasks: ubuntu.yml
   when: ansible_os_family == "Debian"
 
-- name: Install Pip (CentOS)
-  package:
-    name: "python-pip"
-    state: present
+- import_tasks: centos.yml
   when: ansible_os_family == "RedHat"
-  
-- name: Ensure python OpenSSL dependencies are installed.
+
+- name: Ensure pyOpenSSL exists 
   pip:
     name: pyOpenSSL
     state: present
@@ -70,3 +64,8 @@
 - name: Ensure nginx is running and enabled to start at boot
   service: name=nginx state=started enabled=yes
   tags: nginx
+  
+- name: executing vars.yml
+  import_tasks: vars.yml
+  when: configure_extended_tcp_settings == true
+  

@@ -1,0 +1,41 @@
+### This file is used as a reference only and contains all possible options for all roles.
+### Values set in this file are used for illustration only.
+###
+### To connect to an actual network, please follow instructions provided to you
+### on how to generate a valid `group_vars/all` file for the network.
+###
+
+---
+user: ubuntu ### can be changed to centos or other if needed
+ssh_root:
+    - "{{ lookup('file', 'files/admins.pub') }}"
+
+NODE_FULLNAME: "INSERT NODENAME"
+NODE_ADMIN_EMAIL: "INSERT@EMAIL"
+
+NETSTATS_SERVER: "INSERT SERVERNAME"
+NETSTATS_SECRET: "INSERT SECRET"
+
+MINING_KEYFILE: "INSERT HERE"
+MINING_ADDRESS: "INSERT HERE"
+MINING_KEYPASS: "INSERT HERE"
+
+MAIN_REPO_FETCH: "poanetwork"
+GENESIS_BRANCH: "master"
+GENESIS_NETWORK_NAME: "PoANetwork"
+
+MOC_ADDRESS: "INSERT HERE"
+MOC_KEYPASS: "INSERT HERE"
+MOC_KEYFILE: "INSERT HERE"
+
+SCRIPTS_MOC_BRANCH: "master"
+SCRIPTS_VALIDATOR_BRANCH: "master"
+
+BLK_GAS_LIMIT: "6700000"
+NODE_PWD: "node.pwd"
+
+NODE_SOURCE_DEB: "https://deb.nodesource.com/node_8.x"
+PARITY_BIN_LOC: "https://d1h4xl4cr1h0mo.cloudfront.net/v1.9.2/x86_64-unknown-linux-gnu/parity"
+PARITY_BIN_SHA256: "3604a030388cd2c22ebe687787413522106c697610426e09b3c5da4fe70bbd33"
+ORCHESTRATOR_BIN_LOC: ""
+ORCHESTRATOR_BIN_SHA256: ""
