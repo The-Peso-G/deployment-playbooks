@@ -43,7 +43,7 @@
           Name: "{{ explorer_instance_name }}"
         group: "{{ explorer_security_group }}"
         instance_type: "{{ explorer_instance_type }}"
-        image: "{{ image }}"
+        image: "{{ explorer_ami_id }}"
         count: "{{ explorer_count_instances }}"
         wait: yes
         region: "{{ region }}"
@@ -63,7 +63,7 @@
   hosts: all
   hosts: launched
   gather_facts: False
-  user: ubuntu
+  user: "{{ explorer_system_user }}"
   become: True
   vars:
      ansible_ssh_port: 22

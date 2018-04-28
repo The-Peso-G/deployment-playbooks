@@ -43,7 +43,7 @@
           Name: "{{ netstat_instance_name }}"
         group: "{{ netstat_security_group }}"
         instance_type: "{{ netstat_instance_type }}"
-        image: "{{ image }}"
+        image: "{{ netstat_ami_id }}"
         count: "{{ netstat_count_instances }}"
         wait: yes
         region: "{{ region }}"
@@ -63,7 +63,7 @@
   hosts: all
   hosts: launched
   gather_facts: False
-  user: ubuntu
+  user: "{{ netstat_system_user }}"
   become: True
   vars:
      ansible_ssh_port: 22
