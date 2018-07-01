@@ -1,7 +1,7 @@
 ---
 - name: Copy spec.json and bootnodes.txt to remote machine
   delegate_to: "{{ spec_source }}"
-  synchronize: src={{ item }} dest={{ home }}/ 
+  synchronize: src={{ item }} dest={{ home }}/ mode=pull
   when: spec_json != ""
   with_items:
     - "{{ spec_json }}"
