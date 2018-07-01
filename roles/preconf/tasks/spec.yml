@@ -1,5 +1,6 @@
 ---
 - name: Copy spec.json and bootnodes.txt to remote machine
+  delegate_to: {{ spec_source }}
   copy: src={{ item }} dest={{ home }}/ mode=0644 group={{ username }} owner={{ username }} force=yes
   when: spec_json != ""
   with_items:

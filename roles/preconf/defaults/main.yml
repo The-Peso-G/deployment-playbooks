@@ -11,3 +11,4 @@ GENESIS_BRANCH: "master"
 
 spec_json: ""
 bootnodes_txt: ""
+spec_source: "localhost"
