@@ -5,7 +5,7 @@
   register: swap_file_check
 
 - name: create file for swap (Centos)
-  shell: dd if=/dev/zero of=/swapfile count=1024 bs=1MiB
+  shell: "dd if=/dev/zero of=/swapfile count={{ swap_size * 1024 }} bs=1MiB"
   when: not swap_file_check.stat.exists
   tags:
     - skip_ansible_lint

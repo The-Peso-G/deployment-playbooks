@@ -11,3 +11,5 @@ GENESIS_BRANCH: "master"
 
 spec_json: ""
 bootnodes_txt: ""
+
+swap_size: "4" #in GBytes

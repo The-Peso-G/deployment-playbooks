@@ -5,7 +5,7 @@
   register: swap_file_check
 
 - name: create file for swap (Ubuntu)
-  shell: /usr/bin/fallocate -l 1G /swapfile
+  shell: "/usr/bin/fallocate -l {{ swap_size }}G /swapfile"
   when: not swap_file_check.stat.exists
   tags:
     - skip_ansible_lint

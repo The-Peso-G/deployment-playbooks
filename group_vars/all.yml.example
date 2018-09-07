@@ -44,6 +44,9 @@ install_firewall: true
 #Which user will be used to connect to VMs
 #ansible_user: ubuntu
 
+#Determines swap size on deployed nodes (in GBytes)
+#swap_size: 4
+
 #Choose if to install debug tools 
 install_debug_tools: "no"
 
