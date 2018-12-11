@@ -7,8 +7,8 @@ api_version: "9773b5b"
 
 NODE_FULLNAME: ""
 NODE_ADMIN_EMAIL: ""
-NETSTATS_SERVER: ""
-NETSTATS_SECRET: ""
+NETSTAT_SERVER: ""
+NETSTAT_SECRET: ""
 
 username: "poa"
 users:

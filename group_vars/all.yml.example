@@ -164,10 +164,10 @@ api_version: "9773b5b"
 #MOC_KEYFILE: "INSERT HERE"
 
 #Secret code to join netstats.  Important: For netstats role this option sets the password of the netstats. Master of Ceremony later provides it to other nodes.
-#NETSTATS_SECRET: "INSERT HERE"
+#NETSTAT_SECRET: "INSERT HERE"
 
 #URL of netstats server. Should be provided to users by Master of Ceremony
-#NETSTATS_SERVER: "INSERT HERE"
+#NETSTAT_SERVER: "INSERT HERE"
 
 #Node owner's email. Publicly visible in netstats
 #NODE_ADMIN_EMAIL: "INSERT HERE"
