@@ -7,8 +7,8 @@ allow_netstat_http: true
 
 netstat_version: "cb431d6"
 
-NETSTATS_SERVER: "http://localhost:3000"
-NETSTATS_SECRET: ""
+NETSTAT_SERVER: "http://localhost:3000"
+NETSTAT_SECRET: ""
 MAIN_REPO_FETCH: "poanetwork"
 
 NODE_FULLNAME: "netstat"

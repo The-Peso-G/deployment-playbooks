@@ -31,7 +31,7 @@
 
 - name: Config ws_secret.json file
   copy:
-    content: '["{{ NETSTATS_SECRET }}"]'
+    content: '["{{ NETSTAT_SECRET }}"]'
     dest: "{{ home }}/eth-netstats/ws_secret.json"
   notify:
     - restart poa-dashboard
